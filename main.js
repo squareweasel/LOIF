@@ -2,7 +2,7 @@
 
     // Create ink story from the content using inkjs
     var story = new inkjs.Story(storyContent);
-
+    window.story = story;
     var savePoint = "";
 
     let savedTheme;
