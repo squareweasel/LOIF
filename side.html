@@ -1,0 +1,40 @@
+<!-- side.html --> 
+<!doctype html>
+ <html lang=“en”> 
+    <head> <meta charset=“utf-8”>
+
+<title>Side Window</title>
+
+
+<script src="ink.js"></script> <!-- this is the ink javascript library -->
+<script>
+// this function will load the ink story from a json file
+function loadStory() {
+  var deaths = document.getElementById("deaths"); // deaths is the frame where the variable will be displayed
+  continueStory(deaths); // this function will continue the story
+}
+
+// this function will continue the story and display the variable
+function continueStory(deaths) {
+  while (story.canContinue) { // while the story can continue
+    output.innerHTML += story.Continue(); // append the next line of the story to the output frame
+    output.innerHTML += "<br>"; // add a line break
+  }
+  deaths.innerHTML = "Deaths: " + story.variablesState["deaths"]; // display the value of the variable "deaths" in the deaths frame
+}
+</script>
+</head>
+
+<html>
+<head>
+
+</head>
+<body onload="loadStory()">
+<div id="deaths" style="width:50%;height:100%;float:right;border:1px solid black;"></div> <!-- this is the frame for the variable -->
+
+<script src="ink.js"></script>
+<script src="LOIF.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+</body> </html>
