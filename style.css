@@ -44,7 +44,7 @@ h2 {
 
 .written-in-ink {
     z-index: 3;
-    font-size: 9pt;
+    font-size: 6pt;
     font-family: sans-serif;
     text-align: center;
     font-weight: 700;
@@ -54,9 +54,9 @@ h2 {
     background: rgb(19, 18, 18);
     transition: color 0.6s, background 0.6s;
     margin: 0;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    height: 14px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 48px;
     top: 0;
 }
 
@@ -67,12 +67,12 @@ h2 {
 .outerContainer {
     position: absolute;
     display: block;
-    margin: 0;
+    margin: 50px;
     padding: 0;
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
     overflow-x: hidden;
-    height: 100%;
+    height: 70%;
     width: 100%;
     top: 0;
     left: 0;
@@ -105,7 +105,7 @@ body {
     color: rgb(188, 189, 172);
 }
 p {
-    font-size: 13pt;
+    font-size: 15pt;
     color: #ffffff;
     line-height: 1.7em;
     font-weight: lighter;
@@ -263,3 +263,40 @@ body.dark {
 }
 
 .subtitle { font-size: 8pt; color: #9a9d93; line-height: 1.7em; font-weight: lighter; }
+/* 
+extra gameplay stuff, not ink */
+#bottom-frame {
+    display: block;
+    position:absolute;
+    max-width: 600px;
+    bottom: 25%;
+    left:40%;
+    text-align:center;
+  }
+
+#deaths {
+    width: 20%; /* set the width to 50% of the screen */
+    height: 10%; /* set the height to 100% of the screen */
+    position: fixed; /* set the position to fixed */
+    right: 1px; /* set it to align to the right */
+    top: 100px; /* set it to align to the top */
+    border: 1px solid rgb(229, 218, 218); /* add a border */
+  }
+
+#dreams {
+    width: 20%; /* set the width to 50% of the screen */
+    height: 10%; /* set the height to 100% of the screen */
+    position: fixed; /* set the position to fixed */
+    right: 1px; /* set it to align to the right */
+    top: 150px; /* set it to align to the top */
+    border: 1px solid rgb(229, 218, 218); /* add a border */
+  }
+
+  #dreamsSet {
+    width: 20%; /* set the width to 50% of the screen */
+    height: 10%; /* set the height to 100% of the screen */
+    position: fixed; /* set the position to fixed */
+    right: 1px; /* set it to align to the right */
+    top: 200px; /* set it to align to the top */
+    border: 1px solid rgb(229, 218, 218); /* add a border */
+  }

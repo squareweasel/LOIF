@@ -8,18 +8,43 @@
 //   story.variablesState["dreams"] = userDreams.value;
 
 // }
+var userValue=document.getElementById("userInput");
+var userDreams=userValue.value;
 
-function setNumber() {
+function updateInkVar() {
   // Get the value of the input field
-  var userDreams = document.getElementById("userInput").value;
-
+  userDreams=document.getElementById("userInput").value;
   // Display the value of the variable in the userNumber paragraph
   document.getElementById("userNumber").innerHTML = "Dreams Target: " + userDreams;
+  story.variablesState["dreams"] = Number(userDreams);
   
 }
 
-function updateInkVar() {
+function setChoices() {
+  console.log("Setting choice.");
+}
 
-    story.variablesState["dreams"] = userDreams;
+function observeVars() {
+  story.ObserveVariables(
+    [
+      "dreams",
+      "deaths"
+    ],
+    [
+      function(variableName, variableValue) {
+        if (variableValue>0) {
+        dreams.innerHTML = "Dreams left: " + variableValue;
 
+        }
+      },
+      function(variableName, variableValue) {
+        deaths.innerHTML = "Deaths: " + variableValue;
+      }
+    ]
+  ); 
+}
+
+function autoplay() {
+  for (var i=0;i<userDreams;i++)
+  console.log(i);
 }

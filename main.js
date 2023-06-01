@@ -1,3 +1,4 @@
+
 (function(storyContent) {
 
     // Create ink story from the content using inkjs
@@ -48,6 +49,7 @@
     // Main story processing function. Each time this is called it generates
     // all the next content up as far as the next set of choices.
     function continueStory(firstTime) {
+        
 
         var paragraphIndex = 0;
         var delay = 0.0;
@@ -157,7 +159,11 @@
 
             // Fade in paragraph after a short delay
             showAfter(delay, paragraphElement);
-            delay += 200.0;
+            delay += 20.0;
+
+
+            
+
         }
 
         // Create HTML choices from ink choices
@@ -198,7 +204,7 @@
 
             // Fade choice in after a short delay
             showAfter(delay, choiceParagraphElement);
-            delay += 200.0;
+            delay += 0;
 
             // Click on choice
             if(isClickable){
@@ -287,7 +293,7 @@
         var start = outerScrollContainer.scrollTop;
 
         var dist = target - start;
-        var duration = 300 + 300*dist/100;
+        var duration = 50 + 50*dist/100;
         var startTime = null;
         function step(time) {
             if( startTime == null ) startTime = time;
@@ -432,3 +438,4 @@
     }
 
 })(storyContent);
+
